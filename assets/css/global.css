@@ -1,0 +1,44 @@
+:root {
+    --white: #ffffff;
+    --whitesmoke: #f0f2f6;
+    --gary: #aab3c7;
+    --red: #f42a28;
+    --green-light: #49d1b1;
+    --green: #53a063;
+    --transparent:#0000000d; 
+    --green-daark: #716b45;
+    --blue: #37a5c6;
+    --grey: #f5f5f5;
+    --grey-light: #f7f9fc;
+
+}
+
+* {
+    font-family: "Roboto", serif;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--grey);
+}
+
+.content{
+    padding: 1rem;
+    background-color: var(--white);
+    width: 100vw;
+    height: 100vh;
+}
+
+@media screen and (min-width: 992px) {
+    .content {
+        max-width: 992px;
+        max-height: auto;
+        margin: 0 auto;
+        border-radius: 1rem;
+    }
+}
+
+h1 {
+    margin: 0;
+}
+
