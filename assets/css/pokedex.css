@@ -36,7 +36,7 @@
 margin: 0;}
 
 .pokemon .number {
-    color: var(--green-light);
+    color: var(--green);
     text-align: right;
 }
 
