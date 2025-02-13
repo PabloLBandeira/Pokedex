@@ -3,9 +3,142 @@
     flex-direction: column;
     margin: .3rem;
     padding: 2rem 1rem;
-    background-color: var(--green-light);
     border-radius: 1rem;
     color: var(--white);
+}
+
+.alignModal {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start; 
+    position: relative;
+}
+
+.normal {
+    background-color: #A8A77A;
+    .number {
+        color: #A8A77A;
+        filter: brightness(.7);
+    }
+}
+.fire {
+    background-color: #EE8130;
+    .number {
+        color: #EE8130;
+        filter: brightness(.7);
+    }
+}
+.water {
+    background-color: #6390F0;
+    .number {
+        color: #6390F0;
+        filter: brightness(.7);
+    }
+}
+.electric {
+    background-color: #F7D02C;
+    .number {
+        color: #F7D02C;
+        filter: brightness(.7);
+    }
+}
+.grass {
+    background-color: #7AC74C;
+    .number {
+        color: #7AC74C;
+        filter: brightness(.7);
+    }
+}
+.ice {
+    background-color: #96D9D6;
+    .number {
+        color: #96D9D6;
+        filter: brightness(.7);
+    }
+}
+.fighting {
+    background-color: #C22E28;
+    .number {
+        color: #C22E28;
+        filter: brightness(.7);
+    }
+}
+.poison {
+    background-color: #A33EA1;
+    .number {
+        color: #A33EA1;
+        filter: brightness(.7);
+    }
+}
+.ground {
+    background-color: #E2BF65;
+    .number {
+        color: #E2BF65;
+        filter: brightness(.7);
+    }
+}
+.flying {
+    background-color: #A98FF3;
+    .number {
+        color: #A98FF3;
+        filter: brightness(.7);
+    }
+}
+.psychic {
+    background-color: #F95587;
+    .number {
+        color: #F95587;
+        filter: brightness(.7);
+    }
+}
+.bug {
+    background-color: #A6B91A;
+    .number {
+        color: #A6B91A;
+        filter: brightness(.7);
+    }
+}
+.rock {
+    background-color: #B6A136;
+    .number {
+        color: #B6A136;
+        filter: brightness(.7);
+    }
+}
+.ghost {
+    background-color: #735797;
+    .number {
+        color: #735797;
+        filter: brightness(.7);
+    }
+}
+.dragon {
+    background-color: #6F35FC;
+    .number {
+        color: #6F35FC;
+        filter: brightness(.7);
+    }
+}
+.dark {
+    background-color: #705746;
+    .number {
+        color: #705746;
+        filter: brightness(.7);
+    }
+}
+.steel {
+    background-color: #B7B7CE;
+    .number {
+        color: #B7B7CE;
+        filter: brightness(.7);
+    }
+}
+.fairy {
+    background-color: #D685AD;
+    .number {
+        color: #D685AD;
+        filter: brightness(.7);
+    }
 }
 
 .pokemon .detail {
@@ -17,12 +150,12 @@
 
 
 .pokemon .detail .type {
-    background-color: var(--transparent);
     border-radius: 15px;
     margin-bottom: .3rem;
     padding: .3rem;
     text-align: center;
     font-size: small;
+    filter: brightness(1.15);
 }
 
 .pokemon .detail img {
@@ -33,10 +166,11 @@
 }
 
 .pokemon .name {
-margin: 0;}
+    margin: 0;
+    text-transform: capitalize;
+}
 
 .pokemon .number {
-    color: var(--green);
     text-align: right;
 }
 
@@ -53,6 +187,27 @@ margin: 0;}
     display:  grid;
     grid-template-columns: 1fr;
 }
+
+.pagination {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1rem;
+}
+
+.pagination button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: .5rem;
+    margin: .5rem;
+    border-radius: 1rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
 
 @media screen and (min-width: 380px) {
     .pokemons {
@@ -71,3 +226,4 @@ margin: 0;}
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
