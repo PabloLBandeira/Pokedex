@@ -65,18 +65,21 @@ const openModal = (pokemon) => {
 
     pokeApi.getPokemonData(pokemon.name).then((pokemonData) => {
         const pokemonDetails = `
-            <ol>
-            <li><strong>Height</strong>: ${pokemonData.height}</li>
-            <li><strong>Weight</strong>: ${pokemonData.weight}</li>
-            <li><strong>Abilities</strong>: ${pokemonData.abilities.join(', ')}</li>
-            </ol>
-            <ol>
-            <li><strong>Base Stats</strong>:</li>
-            ${pokemonData.baseStats.map(stat => `<li>${stat.stat}: ${stat.value}</li>`).join('')}
-            </ol>
+            <li><span class="modalTitleDetails">Height:</span>  ${pokemonData.height}</li>
+            <li><span class="modalTitleDetails">Weight:</span> ${pokemonData.weight}</li>
+            <li><span class="modalTitleDetails">Abilities:</span> ${pokemonData.abilities.join(", ")}</li>
         `;
+    
+        const baseStatsDetails = `
+            ${pokemonData.baseStats
+                .map((stat) => `<li><span class="modalTitleDetails">${stat.stat}:</span> ${stat.value}</li>`)
+                .join("")}
+        `;
+    
         document.getElementById("pokemonDetails").innerHTML = pokemonDetails;
+        document.getElementById("baseStats").innerHTML = baseStatsDetails;
     });
+    
 
     modal.classList.remove("hide");
     fade.classList.remove("hide");

@@ -16,7 +16,7 @@
   top: 50%;
   transform: translate(-50%, -50%);
   width: 30rem;
-  height: 30rem;
+  height: auto;
   background-color: #fff;
   padding: 1.2rem;
   border-radius: 0.5rem;
@@ -34,6 +34,13 @@
   border-bottom: 1px solid var(--grey-dark);
   margin-bottom: 1rem;
   padding-bottom: 1rem;
+}
+
+.modal-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .pokemon-info {
@@ -54,6 +61,28 @@
   align-items: left;
   list-style: none;
   padding: 0;
+}
+
+.modalTitleDetails{
+  font-weight: bolder;
+}
+
+.pokemon-stats{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+#baseStats{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  width: 100%;
+}
+
+#baseStats li {
+  list-style: none;
+  padding: 0.1rem 0;
 }
 
 
